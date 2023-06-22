@@ -27,6 +27,7 @@ def validBraces(string):
             if string[y] == current_closing_brace:
                 if y - i == 1:
                     validity = True
+                    break
             else:
                 validity = False
     return validity
