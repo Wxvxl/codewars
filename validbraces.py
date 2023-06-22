@@ -31,5 +31,3 @@ def validBraces(string):
             else:
                 validity = False
     return validity
-
-validBraces("([{}])")
