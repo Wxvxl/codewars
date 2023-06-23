@@ -14,6 +14,8 @@ def reverse_words(text):
     for word in word_list:
         new_word += word
 
+    # I need the +25 to make sure it doesn't mess up.
+    # Do not ask. This is horrible
     for i in range(len(new_word)+25):
         for x in whitespace_location:
             if i == x:
