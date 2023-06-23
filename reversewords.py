@@ -1,4 +1,5 @@
 # https://www.codewars.com/kata/5259b20d6021e9e14c0010d4
+# I regret writing this block of code.
 def reverse_words(text):
     whitespace_location = []
 
@@ -13,7 +14,7 @@ def reverse_words(text):
     for word in word_list:
         new_word += word
 
-    for i in range(len(new_word)+99):
+    for i in range(len(new_word)+25):
         for x in whitespace_location:
             if i == x:
                 new_word = new_word[:i] + " " + new_word[i:]
