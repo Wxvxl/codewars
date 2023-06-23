@@ -1,25 +1,6 @@
 # https://www.codewars.com/kata/5259b20d6021e9e14c0010d4
-# I regret writing this block of code.
+# This is the correct way of solving this problem.
+# I wonder what I was thinking previously because that was horrible.
+
 def reverse_words(text):
-    whitespace_location = []
-
-    new_word = ""
-    for i in range(len(text)):
-        if text[i] == " ":
-            whitespace_location.append(i)
-    word_list = text.split()
-    for i in range(len(word_list)):
-        word_list[i] = word_list[i][::-1]
-
-    for word in word_list:
-        new_word += word
-
-    # I need the +25 to make sure it doesn't mess up.
-    # Do not ask. This is horrible
-    for i in range(len(new_word)+25):
-        for x in whitespace_location:
-            if i == x:
-                new_word = new_word[:i] + " " + new_word[i:]
-                whitespace_location.remove(x)
-
-    return new_word
+    return " ".join(s[::-1] for s in text.split(" "))
