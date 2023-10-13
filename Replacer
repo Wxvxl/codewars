@@ -1,0 +1,19 @@
+# def replace_substring(string: str, find: str, replace: str) -> str:
+#     list_string = string.split()
+#     for i in range(len(list_string)):
+#         if list_string[i] == find:
+#             list_string[i] = replace
+#     return " ".join(list_string)
+
+# print(replace_substring("Ciao Ni Hao Hola Amigo Ciao", "Ciao", "Hello"))
+
+# txt="BANANATESTBANANAPOTATOAPPLERIPETEA"
+# print(txt.replace("TEST", "TEA"))
+
+def replace_substring(string: str, to_find: str, replace: str) -> str:
+    while string.find(to_find) != -1:
+        string = string[:string.find(to_find)] + replace + string[string.find(to_find)+len(to_find):]
+    return string
+
+print(replace_substring("NiHaoCiaoHolaBonjourNamaste", "Ciao", "Hello"))
+print(replace_substring("Ciao Ni Hao Hola Bonjour", "Ciao", "Hello"))
